@@ -91,8 +91,5 @@ public class ClienteTitular {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-    
-    
-    
+    }  
 }
