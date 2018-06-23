@@ -13,6 +13,6 @@ public class Cartao {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idCard;
-    private
+  
     
 }
