@@ -1,28 +1,40 @@
 package modelo;
 
+import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Conteudo {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idConteudo; 
+    private long idConteudo;
+    @Column(nullable = false)
     private String nome;
+    @Column(nullable = false)
     private String genero;
+    @Column(nullable = false)
     private String tipo;
+    @Column(nullable = false)
     private int indicacao;
+    @Column(nullable = false)
+    @Temporal(TemporalType.DATE)
     private int anoLancamento;
-    private int tempoDuracao;
+    @Column(nullable = false)
+    @Temporal(TemporalType.TIME)
+    private Date tempoDuracao;
 
-    public int getIdConteudo() {
+    public long getIdConteudo() {
         return idConteudo;
     }
 
-    public void setIdConteudo(int idConteudo) {
+    public void setIdConteudo(long idConteudo) {
         this.idConteudo = idConteudo;
     }
 
@@ -66,11 +78,11 @@ public class Conteudo {
         this.anoLancamento = anoLancamento;
     }
 
-    public int getTempoDuracao() {
+    public Date getTempoDuracao() {
         return tempoDuracao;
     }
 
-    public void setTempoDuracao(int tempoDuracao) {
+    public void setTempoDuracao(Date tempoDuracao) {
         this.tempoDuracao = tempoDuracao;
     }
 }
