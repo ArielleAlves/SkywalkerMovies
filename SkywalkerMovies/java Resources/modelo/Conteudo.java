@@ -1,5 +1,6 @@
 package modelo;
 
+import java.sql.Time;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +29,7 @@ public class Conteudo {
     private int anoLancamento;
     @Column(nullable = false)
     @Temporal(TemporalType.TIME)
-    private Date tempoDuracao;
+    private Time tempoDuracao;
 
     public long getIdConteudo() {
         return idConteudo;
@@ -78,11 +79,11 @@ public class Conteudo {
         this.anoLancamento = anoLancamento;
     }
 
-    public Date getTempoDuracao() {
+    public Time getTempoDuracao() {
         return tempoDuracao;
     }
 
-    public void setTempoDuracao(Date tempoDuracao) {
+    public void setTempoDuracao(Time tempoDuracao) {
         this.tempoDuracao = tempoDuracao;
     }
 }
