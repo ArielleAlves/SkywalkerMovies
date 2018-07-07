@@ -28,9 +28,9 @@ public class ClienteTitular {
     @Column(nullable=false)
     @Temporal(TemporalType.DATE)
     private Date dataNascimento;
-    @Column(nullable=false)
+    @Column(nullable=false, unique = true)
     private String login;
-    @Column(unique=true,nullable=false)
+    @Column(nullable=false)
     private String senha;
 
     public String getNome() {

@@ -5,12 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Pagamento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_pagamento;
+    @Temporal(TemporalType.DATE)
     private Date dataPagamento;
 
     public long getId_pagamento() {
