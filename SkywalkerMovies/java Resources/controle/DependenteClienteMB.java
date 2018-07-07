@@ -5,10 +5,21 @@
  */
 package controle;
 
-/**
- *
- * @author Arielle
- */
+import dao.GenericoDAO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import modelo.DependenteCliente;
+
+@ManagedBean
+@ViewScoped
 public class DependenteClienteMB {
-    
+	private DependenteCliente dependenteCliente = new DependenteCliente();
+	private List<DependenteCliente> dependenteClientes = new ArrayList<>();
+	private GenericoDAO<DependenteCliente> dao = new GenericoDAO<>(DependenteCliente.class);
+	
+	public DependenteClienteMB(){
+		dependenteClientes = dao.buscarTodos();
+        } 
 }
