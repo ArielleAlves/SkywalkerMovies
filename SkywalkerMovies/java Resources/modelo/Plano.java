@@ -11,6 +11,8 @@ public class Plano {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long Id;
+    @Column (nullable = false)
+    private String nome;
     @Column(nullable = false)
     private int valor;
     @Column(nullable = false)

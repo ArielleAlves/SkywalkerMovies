@@ -16,7 +16,7 @@ public class DependenteCliente {
     private String nome;
    @Column(nullable = false)
    @Temporal(TemporalType.DATE)
-    private Date dataNasc;
+    private Date dataNascimento;
    @Column(nullable = false, unique = true)
     private String cpf;
    @Column(nullable = false, unique = true)
@@ -41,11 +41,11 @@ public class DependenteCliente {
     }
 
     public Date getDataNasc() {
-        return dataNasc;
+        return dataNascimento;
     }
 
     public void setDataNasc(Date dataNasc) {
-        this.dataNasc = dataNasc;
+        this.dataNascimento = dataNasc;
     }
 
     public String getCpf() {

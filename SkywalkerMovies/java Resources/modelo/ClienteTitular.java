@@ -24,6 +24,7 @@ public class ClienteTitular {
     private String cpf;
     @Column(nullable=false)
     private String endereco;
+    @Column(nullable = false)
     private String telefone;
     @Column(nullable=false)
     @Temporal(TemporalType.DATE)
