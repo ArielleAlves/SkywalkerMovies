@@ -10,20 +10,20 @@ import javax.persistence.Id;
 public class Plano {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long Id;
+    private long id;
     @Column (nullable = false)
     private String nome;
     @Column(nullable = false)
     private int valor;
     @Column(nullable = false)
-    private String Especificacao;
+    private String especificacao;
 
     public long getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(long Id) {
-        this.Id = Id;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getValor() {
@@ -35,11 +35,11 @@ public class Plano {
     }
 
     public String getEspecificacao() {
-        return Especificacao;
+        return especificacao;
     }
 
-    public void setEspecificacao(String Especificacao) {
-        this.Especificacao = Especificacao;
+    public void setEspecificacao(String especificacao) {
+        this.especificacao = especificacao;
     }
     
     

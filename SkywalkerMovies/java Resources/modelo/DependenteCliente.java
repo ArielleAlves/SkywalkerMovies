@@ -40,12 +40,12 @@ public class DependenteCliente {
         this.nome = nome;
     }
 
-    public Date getDataNasc() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNasc(Date dataNasc) {
-        this.dataNascimento = dataNasc;
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getCpf() {

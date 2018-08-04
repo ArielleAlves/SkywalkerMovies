@@ -32,6 +32,29 @@ public class Cartao {
     public void setIdCard(long idCard) {
         this.idCard = idCard;
     }
-  
+
+    public int getNumCartao() {
+        return numCartao;
+    }
+
+    public void setNumCartao(int numCartao) {
+        this.numCartao = numCartao;
+    }
+
+    public Date getValidade() {
+        return validade;
+    }
+
+    public void setValidade(Date validade) {
+        this.validade = validade;
+    }
+
+    public int getCodSeguranca() {
+        return codSeguranca;
+    }
+
+    public void setCodSeguranca(int codSeguranca) {
+        this.codSeguranca = codSeguranca;
+    }
     
 }

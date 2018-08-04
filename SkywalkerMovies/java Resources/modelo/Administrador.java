@@ -58,7 +58,5 @@ public class Administrador {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-    
-    
+    }   
 }

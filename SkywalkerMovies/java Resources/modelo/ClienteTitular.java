@@ -23,7 +23,7 @@ public class ClienteTitular {
     @Column(unique=true,nullable=false)
     private String cpf;
     @Column(nullable=false)
-    private String endereco;
+    private String cidade;
     @Column(nullable = false)
     private String telefone;
     @Column(nullable=false)
@@ -66,12 +66,12 @@ public class ClienteTitular {
         this.cpf = cpf;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
     public String getTelefone() {
