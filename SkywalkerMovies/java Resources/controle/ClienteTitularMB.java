@@ -10,11 +10,34 @@ import modelo.ClienteTitular;
 @ManagedBean
 @ViewScoped
 public class ClienteTitularMB {
-	private ClienteTitular clienteTitular = new ClienteTitular();
+	private ClienteTitular cTitular = new ClienteTitular();
 	private List<ClienteTitular> clientesTitulares = new ArrayList<>();
 	private GenericoDAO<ClienteTitular> dao = new GenericoDAO<>(ClienteTitular.class);
 	
 	public ClienteTitularMB(){
 		clientesTitulares = dao.buscarTodos();
         }    
+        
+        
+        public void inserir() {
+		if (cTitular.getId() == null) {
+			dao.salvar(cTitular);
+		}
+	}
+          
+        public List<ClienteTitular> getClienteTitular(){
+            return clientesTitulares;
+        }
+        
+        public void setClienteTitular(List<ClienteTitular> clientesTitulares){
+            this.clientesTitulares = clientesTitulares;
+        }
+        
+        public ClienteTitular getClienteTitular(){
+            return cTitular;
+        }
+        
+        public void setCTitular(ClienteTitular clienteTitular){
+            this.cTitular = clienteTitular;
+        }
 }
