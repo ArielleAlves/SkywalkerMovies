@@ -3741,7 +3741,13 @@
 			color: rgba(255, 255, 255, 0.85);
 			font-size: 1.75em;
 		}
-
+                
+                #banner .login {
+                    alignment-adjust:Left
+                    margin: 0 auto;
+                    width: 8em;
+                    position: relative;
+                }
 	@-moz-keyframes more {
 		0% {
 			bottom: -3em;
