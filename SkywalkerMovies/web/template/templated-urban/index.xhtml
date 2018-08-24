@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Página Inicial</title>
         <meta charset="utf-8" />
@@ -45,44 +48,37 @@
                             <!-- Formulário Cadastro-->
                             <h3>Cadastre-se agora mesmo</h3>
 
-                            <form method="post" action="#">
+                            <form id="formCadastroCliente">
+                                <h:panelGrid colmns="3">
                                 <div class="row uniform">
-                                    <div class="6u 12u$(xsmall)">
-                                        <input type="text" name="name" id="name" value="" placeholder="Nome" />
+                                    <div class="6u 12u(xsmall)">
+                                        <p:input type="text" name="name" id="name" value="#{clienteTitularMB.cTitular.nome}" placeholder="Nome" />
                                     </div>
-                                    <div class="6u$ 12u$(xsmall)">
-                                        <input type="email" name="email" id="email" value="" placeholder="Email" />
-                                    </div>
-                                    <div class="4u 8u(xsmall)">
-                                        <input type="text" name="login" id="login" value="" placeholder="Login" />
+                                    <div class="6u 12u(xsmall)">
+                                        <p:input type="email" name="email" id="email" value="#{clienteTitularMB.cTitular.email}" placeholder="Email" />
                                     </div>
                                     <div class="4u 8u(xsmall)">
-                                        <input type="password" name="senha" id="senha" value="" placeholder="Senha" />
+                                        <p:input type="text" name="login" id="login" value="#{clienteTitularMB.cTitular.login}" placeholder="Login" />
                                     </div>
-                                    <div class="4u$ 8u(xsmall)">
-                                        <input type="text" name="dataNascimento" id="dataNascimento" value="" placeholder="Data Nascimento" />
+                                    <div class="4u 8u(xsmall)">
+                                        <p:input type="password" name="senha" id="senha" value="#{clienteTitularMB.cTitular.senha}" placeholder="Senha" />
                                     </div>
-                                    <div class="4u 8u$(xsmall)">
-                                        <input type="text" name="fone" id="fone" value="" placeholder="Telefone" />
+                                    <div class="4u 8u(xsmall)">
+                                        <p:input type="text" name="dataNascimento" id="dataNascimento" value="#{clienteTitularMB.cTitular.dataNascimento}" placeholder="Data Nascimento" />
                                     </div>
-                                    <div class="4u 8u$(xsmall)">
-                                        <input type="text" name="rg" id="rg" value="" placeholder="RG" />
+                                    <div class="4u 8u(xsmall)">
+                                        <p:input type="text" name="fone" id="fone" value="#{clienteTitularMB.cTitular.telefone}" placeholder="Telefone" />
                                     </div>
-                                    <div class="4u 8u$(xsmall)">
-                                        <input type="text" name="cpf" id="cpf" value="" placeholder="CPF" />
+                                    <div class="4u 8u(xsmall)">
+                                        <p:input type="text" name="rg" id="rg" value="#{clienteTitularMB.cTitular.rg}" placeholder="RG" />
                                     </div>
-                                    <div class="4u 10u$(xsmall)">
-                                        <input type="text" name="rua" id="rua" value="" placeholder="Rua" />
+                                    <div class="4u 8u(xsmall)">
+                                        <p:input type="text" name="cpf" id="cpf" value="#{clienteTitularMB.cTitular.cpf}" placeholder="CPF" />
                                     </div>
-                                    <div class="2u 3u(xsmall)">
-                                        <input type="text" name="numeroCasa" id="numero" value="" placeholder="Nº" />
-                                    </div>
-                                    <div class="4u 8u$(xsmall)">
-                                        <input type="text" name="bairro" id="bairro" value="" placeholder="Bairro" />
-                                    </div>
+                                    
 
                                     <!-- Break -->
-                                    <div class="12u$ 18u$">
+                                    <div class="12u 18u">
                                         <div class="select-wrapper">
                                             <select name="categoriaCidade" id="cidade">
                                                 <option value="">- Cidade -</option>
@@ -99,18 +95,21 @@
 
                                     <!-- Break -->
 
-                                    <div class="6u$ 12u$(small)">
+                                    <div class="6u 12u(small)">
                                         <input type="checkbox" id="human" name="human" />
                                         <label for="human">Eu sou humano e não sou robo</label>
                                     </div>
                                     <!-- Break -->
-                                    <div class="12u$">
+                                    <div class="12u">
                                         <ul class="actions">
                                             <li><input type="submit" value="Enviar" /></li>
+                                            <!-- botao para chamar metodo <p:commandButton update="@form, formTabelaClientes" value="Cadastrar"
+                                            actionListener="#{clienteTitular.inserir()}"/> -->
                                             <li><input type="reset" value="Limpar" class="alt" /></li>
                                         </ul>
                                     </div>
                                 </div>
+                                </h:panelGrid>
                             </form>
 
                             <hr />
@@ -192,5 +191,5 @@
         <script src="assets/js/main.js"></script>
 
     </h:body>
-</html>
+</xhtml>
 
