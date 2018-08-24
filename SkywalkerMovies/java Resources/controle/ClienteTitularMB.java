@@ -20,7 +20,7 @@ public class ClienteTitularMB {
         
         
         public void inserir() {
-		if (cTitular.getId() == null) {
+		if (cTitular.getId_cliente() == null) {
 			dao.salvar(cTitular);
 		}
 	}
@@ -33,7 +33,7 @@ public class ClienteTitularMB {
             this.clientesTitulares = clientesTitulares;
         }
         
-        public ClienteTitular getClienteTitular(){
+        public ClienteTitular getcTitular(){
             return cTitular;
         }
         

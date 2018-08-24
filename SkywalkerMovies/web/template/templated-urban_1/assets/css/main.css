@@ -3743,7 +3743,7 @@
 		}
                 
                 #banner .login {
-                    alignment-adjust:Left
+                    alignment-adjust:Left;
                     margin: 0 auto;
                     width: 8em;
                     position: relative;

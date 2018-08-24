@@ -34,6 +34,13 @@ public class ClienteTitular {
     @Column(nullable=false)
     private String senha;
 
+    public Long getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(long id_cliente) {
+        this.id_cliente = id_cliente;
+    }
     public String getNome() {
         return nome;
     }
